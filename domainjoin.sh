@@ -45,7 +45,7 @@ sed -i '7a group:           compat winbind' /etc/nsswitch.conf
 sed -i '8a shadow:          compat winbind' /etc/nsswitch.conf
 
 #Making home directory
-mkdir /h
+mkdir /home
 #Making changes in config file so that home directory will be autocreated
 sed -i '$ a  session optional        pam_mkhomedir.so skel=/etc/skel umask=077' /etc/pam.d/common-session
 
